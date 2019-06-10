@@ -1,0 +1,17 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div *ngFor="let key of mat_keys" class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card layout">
+                <img src="../../assets/img/{{material[key].img}}" class="img-fluid" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{material[key].name}}</h5>
+                  <p class="card-text">{{cat_keys[material[key].categoria]}}</p>
+                  <button (click)="request(token['token'], pk_user, key)" 
+                  [disabled]="!material[key].disponibilidad" class="btn btn-primary">Solicitar Equipo</button>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
